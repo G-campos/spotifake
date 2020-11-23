@@ -2,11 +2,18 @@ import Vue from 'vue';
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUserSecret);
+// FontAwesomeIcon
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHeart, faSun } from "@fortawesome/free-regular-svg-icons";
+import { faSearch, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+
+//Adicionar o icone direto aqui, a importação é feita automaticamente
+library.add(faHeart, faPause, faPlay, faSun); //regular
+library.add(faSearch); //solid
+library.add(faSpotify); //Brands
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
